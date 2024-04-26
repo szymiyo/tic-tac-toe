@@ -22,17 +22,17 @@ export default function Player({
 
   return (
     <li
-      className={`flex items-center w-6/12 border-2 border-solid rounded 
+      className={`flex items-center justify-around sm:justify-evenly w-5/12 border-2 border-solid rounded 
       ${
         isActive && symbol === "X" ? "border-cross animate-pulse" : 
         isActive && symbol === "O" ? "border-circle animate-pulse" : 
         "border-transparent"
       }`}
     >
-      <span className="p-2 rounded font-bold border-2 border-transparent border-solid flex justify-center items-center">
+      <span className="p-1 sm:p-2 rounded font-bold border-2 border-transparent border-solid flex justify-center items-center">
         {editable && editable ? (
           <input
-            className="text-base w-40 p-2 bg-gray-500 text-center uppercase border-none animate-pulse"
+            className="text-xs sm:text-base w-[4rem] sm:w-28 p-1 sm:p-2 ml-0 bg-gray-500 text-center uppercase border-none animate-pulse"
             type="text"
             value={playerName}
             onChange={handleChange}
@@ -40,22 +40,22 @@ export default function Player({
           />
         ) : (
           <span
-            className={`inline-block w-40 text-base uppercase m-0 p-2 rounded text-center 
+            className={`inline-block text-xs sm:text-base uppercase p-1 sm:p-2 rounded text-center 
             ${symbol === "X" ? "text-cross" : "text-circle"}`}
           >
             {playerName}
           </span>
         )}
-        <span
-          className={`ml-4 text-base 
+      </span>
+      <span
+          className={`m-0 text-xs sm:text-base 
           ${symbol === "X" ? "text-cross" : "text-circle"}
           `}
         >
           {symbol}
         </span>
-      </span>
       <button
-        className="w-12 text-triangle text-sm cursor-pointer text-center border-none bg-none transition-colors px-1 py-2"
+        className="w-12 text-triangle text-xs sm:text-sm cursor-pointer text-center border-none bg-none transition-colors px-0 sm:px-1 py-2 ml-0"
         onClick={handleEditButton}
       >
         {editable ? "Save" : "Edit"}
