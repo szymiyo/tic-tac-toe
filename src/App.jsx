@@ -95,8 +95,8 @@ function App() {
 
   return (
     <div className="flex h-screen justify-center items-center">
-      <main className="mx-8 sm:mx-0 my-auto sm:m-auto">
-        <div className="w-screen max-w-3xl mx-auto my-12 py-6 px-1 sm:p-8 rounded-md bg-zinc-900 relative">
+      <main className="w-full mx-2 sm:mx-0 my-auto sm:m-auto">
+        <div className="max-w-3xl mx-auto my-12 py-6 px-1 sm:p-8 rounded-md bg-zinc-900 relative">
           <ol className="p-0 flex justify-around sm:justify-center items-center gap-0 sm:gap-8 mx-0 my-auto list-none">
             <Player
               initialName={PLAYERS.X}
